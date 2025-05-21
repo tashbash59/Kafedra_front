@@ -1,0 +1,167 @@
+/* ===== СТИЛИ СТРАНИЦЫ МАТЕРИАЛЫ ===== */
+.materials-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+a {
+    all: unset; /* Сбрасывает все стили */
+    color: inherit; /* Наследует цвет текста от родителя */
+    text-decoration: inherit; /* Убирает подчеркивание */
+    cursor: pointer; /* Сохраняет курсор-указатель */
+}
+
+.materials-tabs {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.materials-tab {
+    font-size: 20px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    padding-bottom: 8px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.materials-tab.active {
+    color: #333;
+}
+
+.materials-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgba(74, 123, 247, 1);
+}
+
+.materials-tab:hover {
+    color: #444;
+}
+
+.materials-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.materials-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.materials-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Поиск */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    opacity: 0.6;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    padding: 5px 0;
+    color: #666;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+/* Таблица публикаций */
+.publications-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-header {
+    display: flex;
+    background-color: rgba(243, 246, 255, 1);
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row:hover {
+    background-color: rgba(243, 246, 255, 0.5);
+}
+
+.table-cell {
+    flex: 1;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+    border-right: 1px solid #e0e0e0
+}
+
+.table-header .table-cell {
+    color: #333;
+    padding: 15px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .materials-container {
+        padding: 0 15px;
+    }
+    
+    .materials-card {
+        padding: 20px;
+    }
+    
+    .materials-title {
+        font-size: 20px;
+    }
+    
+    .table-header, .table-row {
+        flex-direction: column;
+    }
+    
+    .table-cell {
+        padding: 10px;
+    }
+}

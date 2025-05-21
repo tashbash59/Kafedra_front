@@ -1,0 +1,144 @@
+/* ===== СТИЛИ СТРАНИЦЫ ИСТОРИЯ ===== */
+.history-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.history-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.history-tabs {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.history-tab {
+    font-size: 25px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    padding-bottom: 8px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.history-tab.active {
+    color: #333;
+}
+
+.history-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgba(74, 123, 247, 1);
+}
+
+.history-tab:hover {
+    color: #444;
+}
+
+.history-main-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.history-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.history-text {
+    font-size: 21px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.history-image-container {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.history-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.history-image-container:hover {
+    transform: scale(1.01);
+}
+
+.history-image-container:hover .history-image {
+    transform: scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .history-container {
+        padding: 0 15px;
+    }
+    
+    .history-card {
+        padding: 25px;
+    }
+    
+    .history-tabs {
+        gap: 15px;
+    }
+    
+    .history-tab {
+        font-size: 18px;
+    }
+    
+    .history-main-title {
+        font-size: 24px;
+    }
+    
+    .history-text {
+        font-size: 15px;
+    }
+    
+    .history-image-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-tabs {
+        flex-direction: column;
+        gap: 10px;
+        border-bottom: none;
+    }
+    
+    .history-tab {
+        padding-bottom: 5px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .history-tab.active::after {
+        display: none;
+    }
+}

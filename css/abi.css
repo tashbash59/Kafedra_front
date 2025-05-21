@@ -1,0 +1,585 @@
+/* ===== СТИЛИ СТРАНИЦЫ ОБУЧЕНИЕ ===== */
+.education-container {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.education-hero {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.education-hero:hover .hero-image {
+    transform: scale(1.03);
+}
+
+.education-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.education-tabs {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.education-tab {
+    font-size: 20px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    padding-bottom: 8px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.education-tab.active {
+    color: #333;
+}
+
+.education-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgba(74, 123, 247, 1);
+}
+
+.education-tab:hover {
+    color: #444;
+}
+
+.education-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.education-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 40px 0 20px;
+    color: #333;
+}
+
+.education-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Сетка навыков */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.skill-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(249, 250, 254, 1);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(245, 247, 250, 1);
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.skill-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.skill-content {
+    flex: 1;
+}
+
+.skill-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.skill-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Дополнительные блоки */
+.additional-blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.additional-block {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.additional-block:hover {
+    border-color: rgba(74, 123, 247, 0.5);
+    box-shadow: 0 4px 12px rgba(74, 123, 247, 0.1);
+}
+
+.block-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: rgba(74, 123, 247, 1);
+}
+
+.block-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .education-container {
+        padding: 0 15px;
+    }
+    
+    .education-card {
+        padding: 25px;
+    }
+    
+    .education-tabs {
+        gap: 15px;
+    }
+    
+    .education-tab {
+        font-size: 18px;
+    }
+    
+    .education-title {
+        font-size: 24px;
+    }
+    
+    .education-subtitle {
+        font-size: 20px;
+    }
+    
+    .skills-grid,
+    .additional-blocks {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-tabs {
+        flex-direction: column;
+        gap: 10px;
+        border-bottom: none;
+    }
+    
+    .education-tab {
+        padding-bottom: 5px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .education-tab.active::after {
+        display: none;
+    }
+    
+    .skill-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* ===== СТИЛИ ДЛЯ БЛОКА ПРОЕКТОВ (2 В РЯДУ) ===== */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.project-card {
+    background-color: rgba(249, 250, 254, 1);
+    border-radius: 16px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Карточка, которая должна быть прижата к левому краю */
+.project-card.last-card {
+    grid-column: 1; /* Занимает только первую колонку */
+    width: 100%; /* Полная ширина колонки */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Остальные стили остаются без изменений */
+.project-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.project-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.project-description {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.project-link {
+    color: rgba(74, 123, 247, 1);
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    align-self: flex-start;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: rgba(74, 123, 247, 1);
+    transition: width 0.3s ease;
+}
+
+.project-link:hover {
+    color: rgba(60, 100, 220, 1);
+}
+
+.project-link:hover::after {
+    width: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        padding: 24px;
+    }
+    
+    .project-card.last-card {
+        grid-column: 1; /* На мобильных тоже занимает всю ширину */
+    }
+}
+
+/* ===== СТИЛИ ДЛЯ БЛОКА МЕРОПРИЯТИЙ ===== */
+.events-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.event-block {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.event-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.event-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.event-image-container {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding-bottom: 20px;
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.event-image-container:hover {
+    transform: translateY(-5px);
+}
+
+.event-image-container:hover .event-image {
+    transform: scale(1.03);
+}
+
+/* Стили для блоков с названием института */
+.institute-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.institute-block {
+    background-color: rgba(243, 246, 255, 1);
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .event-block {
+        padding: 25px;
+    }
+    
+    .event-title {
+        font-size: 24px;
+    }
+    
+    .event-description {
+        font-size: 15px;
+    }
+    
+    .institute-block {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+/* Стили для секции отзывов */
+.reviews-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Контейнер карусели */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Кнопки навигации */
+.carousel-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: #F3F6FF;
+    transform: scale(1.05);
+}
+
+.carousel-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Основная карусель */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    all: unset; /* Сбрасывает все стили */
+    color: inherit; /* Наследует цвет текста от родителя */
+    text-decoration: inherit; /* Убирает подчеркивание */
+    cursor: pointer; /* Сохраняет курсор-указатель */
+}
+
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+/* Карточка отзыва */
+.review-card {
+    min-width: 100%;
+    display: flex;
+    background: rgba(249, 250, 254, 1);
+    border-radius: 16px;
+    padding: 30px;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+.review-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.review-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-author {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Точки-индикаторы */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #E0E0E0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #4A7BF7;
+    transform: scale(1.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .review-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .review-photo {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .carousel-button {
+        width: 36px;
+        height: 36px;
+    }
+}

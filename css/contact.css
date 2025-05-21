@@ -1,0 +1,107 @@
+/* Добавляем только специфичные стили для контактов */
+        .contact-page-wrapper {
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+            min-height: calc(100vh - 80px);
+        }
+        
+        .contact-container {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-main-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        
+        .contact-address {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        
+        .contact-address b {
+            font-weight: 600;
+        }
+        
+        .contact-section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            color: #333;
+        }
+        
+        .contact-text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .contact-bold-text {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .contact-divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 30px 0;
+        }
+        
+        .contact-image {
+            width: calc(100% + 70px); /* Увеличиваем ширину изображения */
+            margin: 20px -40px; /* Компенсируем увеличение отрицательными отступами */
+            border-radius: 0; /* Убираем скругление если нужно */
+            max-width: none; /* Отменяем ограничение максимальной ширины */
+        }
+                
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .contact-table th, 
+        .contact-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .contact-table th {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 25px;
+            }
+            
+            .contact-main-title {
+                font-size: 24px;
+            }
+            
+            .contact-section-title {
+                font-size: 18px;
+            }
+            
+            .contact-table th, 
+            .contact-table td {
+                padding: 8px;
+            }
+        }
