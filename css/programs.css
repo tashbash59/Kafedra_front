@@ -2,11 +2,11 @@
         .directions-container {
             max-width: 1200px;
             margin: 0 auto 40px;
-            padding: 0 20px;
+            padding: 0 0;
         }
         
         .directions-title {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 600;
             margin-bottom: 30px;
             color: #333;
@@ -61,7 +61,7 @@
         }
         
         .disciplines-title {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 600;
             margin-bottom: 20px;
             color: #333;

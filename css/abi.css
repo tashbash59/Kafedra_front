@@ -7,7 +7,7 @@
 
 .education-hero {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 30px;
     border-radius: 20px;
     overflow: hidden;
@@ -65,7 +65,8 @@
     bottom: -1px;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 4px;
+    border-radius: 4px;
     background-color: rgba(74, 123, 247, 1);
 }
 
@@ -74,14 +75,14 @@
 }
 
 .education-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 30px;
     color: #333;
 }
 
 .education-subtitle {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 600;
     margin: 40px 0 20px;
     color: #333;
@@ -359,7 +360,7 @@
 }
 
 .event-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 20px;
     color: #333;
@@ -440,7 +441,7 @@
 }
 
 .section-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     color: #333;
     margin-bottom: 40px;
