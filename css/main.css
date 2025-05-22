@@ -29,6 +29,10 @@ body {
     box-shadow: 0 2px 15px rgba(0,0,0,0.08);
     position: relative;
     z-index: 1000;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 nav {
@@ -59,6 +63,8 @@ nav {
     transition: all 0.3s ease;
     position: relative;
     white-space: nowrap;
+    display: table;
+    clear: both;
 }
 .nav-links a.active::after {
             content: '';
@@ -209,12 +215,13 @@ nav {
 }
 
 .news-card {
-    flex: 0 0 calc(60% * var(--main-card-ratio));
+    flex: 0 0 calc(40% * var(--main-card-ratio));
     min-width: 280px;
     scroll-snap-align: start;
     background-color: white;
     border-radius: 16px;
     overflow: hidden;
+    margin-top: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -233,7 +240,7 @@ nav {
     left: 0;
     width: 95%;
     height: 100%;
-    margin: 15px;
+    margin: 10px;
     object-fit: cover;
     border-radius: 16px;
     transition: transform 0.5s ease;
@@ -352,4 +359,81 @@ nav {
         flex-wrap: wrap;
         justify-content: center;
     }
+}
+
+
+/* Кнопки навигации */
+.carousel-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: #F3F6FF;
+    transform: scale(1.05);
+}
+
+.carousel-button svg {
+    width: 24px;
+    height: 24px;
+}
+.news-carousel {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carousel-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.news-cards-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.news-card {
+    flex: 0 0 calc(40% - 14px); /* 3 карточки в строке, видно 2.5 */
+    min-width: 0;
+}
+
+.carousel-button {
+    background: white;
+    border: 1px solid #4A7BF7;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    background: #f0f5ff;
+}
+
+.carousel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.carousel-button svg {
+    display: block;
 }

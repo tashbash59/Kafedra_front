@@ -1,0 +1,136 @@
+/* Стили для секции новостей */
+.news-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.news-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    gap: 30px;
+}
+
+/* Стили для карточки новости */
+.news-article {
+    display: flex;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.article-image-container {
+    flex: 0 0 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.article-image {
+    margin: 10px;
+    width: 85%;
+    height: 90%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 16px;
+}
+
+.article-content {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.article-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.article-date {
+    font-size: 14px;
+    color: #999;
+}
+
+.article-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(74, 123, 247, 1);
+    color: white;
+    border-radius: 32px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.article-button:hover {
+    background-color: rgba(58, 103, 216, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(74, 123, 247, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-article {
+        flex-direction: column;
+    }
+    
+    .article-image-container {
+        flex: 0 0 200px;
+    }
+    
+    .article-image {
+        border-radius: 16px 16px 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-title {
+        font-size: 28px;
+    }
+    
+    .article-title {
+        font-size: 18px;
+    }
+    
+    .article-text {
+        font-size: 15px;
+    }
+}

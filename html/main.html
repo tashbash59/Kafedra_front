@@ -67,29 +67,105 @@
             <h2 class="news-title">Новости кафедры</h2>
             
             <div class="news-carousel">
-                <div class="news-card">
-                    <div class="news-image-container">
-                        <img src="../img/img2_main.svg" alt="Олимпиада по 3D-моделированию" class="news-image">
-                    </div>
-                    <div class="news-content">
-                        <h3 class="news-card-title">Участие в олимпиаде по 3D-моделированию</h3>
-                        <p class="news-description">Олимпиада по 3D-моделированию проводится среди студентов технических специальностей.</p>
-                        <a href="#" class="news-button">Читать</a>
+                <button class="carousel-button prev-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="#4A7BF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="carousel-wrapper">
+                    <div class="news-cards-container">
+                        <div class="news-card">
+                            <div class="news-image-container">
+                                <img src="../img/img2_main.svg" alt="Олимпиада по 3D-моделированию" class="news-image">
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-card-title">Участие в олимпиаде по 3D-моделированию</h3>
+                                <p class="news-description">Олимпиада по 3D-моделированию проводится среди студентов технических специальностей.</p>
+                                <a href="#" class="news-button">Читать</a>
+                            </div>
+                        </div>
+                                                <div class="news-card">
+                            <div class="news-image-container">
+                                <img src="../img/img2_main.svg" alt="Олимпиада по 3D-моделированию" class="news-image">
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-card-title">Участие в олимпиаде по 3D-моделированию</h3>
+                                <p class="news-description">Олимпиада по 3D-моделированию проводится среди студентов технических специальностей.</p>
+                                <a href="#" class="news-button">Читать</a>
+                            </div>
+                        </div>
+                                                <div class="news-card">
+                            <div class="news-image-container">
+                                <img src="../img/img2_main.svg" alt="Олимпиада по 3D-моделированию" class="news-image">
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-card-title">Участие в олимпиаде по 3D-моделированию</h3>
+                                <p class="news-description">Олимпиада по 3D-моделированию проводится среди студентов технических специальностей.</p>
+                                <a href="#" class="news-button">Читать</a>
+                            </div>
+                        </div>
+                                                <div class="news-card">
+                            <div class="news-image-container">
+                                <img src="../img/img2_main.svg" alt="Олимпиада по 3D-моделированию" class="news-image">
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-card-title">Участие в олимпиаде по 3D-моделированию</h3>
+                                <p class="news-description">Олимпиада по 3D-моделированию проводится среди студентов технических специальностей.</p>
+                                <a href="#" class="news-button">Читать</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="news-card">
-                    <div class="news-image-container">
-                        <img src="../img/img3_main.svg" alt="Гагаринские чтения" class="news-image">
-                    </div>
-                    <div class="news-content">
-                        <h3 class="news-card-title">Проведение L научной конференции «Гагаринские чтения»</h3>
-                        <p class="news-description">С приходом весны 11 апреля в стенах нашей родной альма-матер состоится научная конференция.</p>
-                        <a href="#" class="news-button">Читать</a>
-                    </div>
-                </div>
+                <button class="carousel-button next-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="#4A7BF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
         </section>
     </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.news-carousel');
+    const container = document.querySelector('.news-cards-container');
+    const cards = document.querySelectorAll('.news-card');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    
+    const cardStyle = window.getComputedStyle(cards[0]);
+    const cardWidth = cards[0].offsetWidth + parseInt(cardStyle.marginRight);
+    let currentPosition = 0;
+    const visibleCards = 2.4;
+    const maxPosition = (cards.length - visibleCards) * cardWidth;
+    
+    function updateCarousel() {
+        container.style.transform = `translateX(-${currentPosition}px)`;
+        prevButton.disabled = currentPosition <= 0;
+        nextButton.disabled = currentPosition >= maxPosition;
+    }
+    
+    prevButton.addEventListener('click', function() {
+        currentPosition = Math.max(0, currentPosition - cardWidth);
+        updateCarousel();
+    });
+    
+    nextButton.addEventListener('click', function() {
+        currentPosition = Math.min(maxPosition, currentPosition + cardWidth);
+        updateCarousel();
+    });
+    
+    updateCarousel();
+    
+    // Адаптация при изменении размера окна
+    window.addEventListener('resize', function() {
+        const newCardWidth = cards[0].offsetWidth + parseInt(window.getComputedStyle(cards[0]).marginRight);
+        if (newCardWidth !== cardWidth) {
+            currentPosition = Math.min(maxPosition, currentPosition);
+            updateCarousel();
+        }
+    });
+});
+</script>
 </body>
 </html>
