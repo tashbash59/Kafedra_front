@@ -1,10 +1,12 @@
 /* ===== БАЗОВЫЕ НАСТРОЙКИ ===== */
 :root {
     --base-width: 1440px;
-    --content-width: 1200px;
+    --content-width: 1000px;
     --main-card-ratio: 1;
 }
-
+.news-buttons{
+    display: flex;
+}
 * {
     margin: 0;
     padding: 0;
@@ -41,15 +43,21 @@ nav {
     justify-content: space-between;
     padding: 20px 5%;
     max-width: var(--content-width);
-    margin: 0 auto;
+    margin: 0 5%;
 }
-
+.logo {
+    display: flex;
+    align-items: center;
+}
 .logo img {
-    height: 40px;
+    height: 35px;
     width: auto;
+    margin: 0 10px;;
     transition: transform 0.3s ease;
 }
-
+.logo .mai img{
+    margin-right: 100px;
+}
 .nav-links {
     display: flex;
     gap: 24px;
@@ -58,6 +66,7 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: #666;
+    font-weight: 500;
     font-size: 16px;
     padding: 8px 12px;
     transition: all 0.3s ease;
@@ -197,6 +206,7 @@ nav {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 40px;
+    margin-right: 10px;
     color: #333;
     text-align: left;
 }
@@ -364,9 +374,9 @@ nav {
 
 /* Кнопки навигации */
 .carousel-button {
-    width: 46px;
-    height: 46px;
-    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+    margin: 8px 5px;
     border-radius: 50%;
     background: white;
     border: 1px solid #E0E0E0;

@@ -1,6 +1,6 @@
 /* ===== СТИЛИ СТРАНИЦЫ ИСТОРИЯ ===== */
 .history-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -26,7 +26,7 @@
 }
 
 .history-tab {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     color: #666;
     cursor: pointer;
