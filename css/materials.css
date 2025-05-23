@@ -1,6 +1,6 @@
 /* ===== СТИЛИ СТРАНИЦЫ МАТЕРИАЛЫ ===== */
 .materials-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -20,13 +20,20 @@ a {
 }
 
 .materials-tab {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     color: #666;
     cursor: pointer;
     padding-bottom: 8px;
     position: relative;
     transition: color 0.3s ease;
+}
+.table-cell:first-child {
+    width: 50px; /* Фиксированная ширина для номера */
+    min-width: 50px;
+    max-width: 50px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .materials-tab.active {
