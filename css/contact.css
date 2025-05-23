@@ -1,7 +1,7 @@
 /* Добавляем только специфичные стили для контактов */
         .contact-page-wrapper {
             padding: 40px 20px;
-            background-color: #f8f9fa;
+            background-color: white;
             min-height: calc(100vh - 80px);
             width: 100%;
         }
@@ -11,7 +11,7 @@
             border-radius: 16px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 40px;
-            max-width: 1160px;
+            max-width: 960px;
             margin: 0 auto;
             transition: all 0.3s ease;
         }

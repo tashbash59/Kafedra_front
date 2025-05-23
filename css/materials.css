@@ -15,7 +15,7 @@ a {
 .materials-tabs {
     display: flex;
     gap: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding-bottom: 10px;
 }
 
@@ -58,7 +58,7 @@ a {
     background-color: white;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 30px;
+    padding: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

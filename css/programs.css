@@ -90,6 +90,9 @@
             padding: 40px;
             text-align: center;
             margin-top: 40px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
         
         .program-title {
@@ -98,8 +101,7 @@
             margin-bottom: 20px;
             color: #333;
         }
-        
-        .program-button {
+        .download {
             background-color: transparent;
             border: 2px solid rgba(74, 123, 247, 1);
             color: rgba(74, 123, 247, 1);
@@ -109,8 +111,25 @@
             cursor: pointer;
             font-weight: 500;
             transition: all 0.3s ease;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+        }
+        .file-icon {
+
+        }
+
+        .program-button {
+            background-color: transparent;
+            color: rgba(74, 123, 247, 1);
+            padding: 0 5px;
+            font-size: 16px;
+            border-radius: 32px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
         
-        .program-button:hover {
+        .download:hover {
             background-color: rgba(74, 123, 247, 0.1);
         }
